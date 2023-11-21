@@ -3,6 +3,7 @@
  */
 package bbtriangle;
 
+
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -11,4 +12,26 @@ class AppTest {
         App classUnderTest = new App();
         assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
     }
+
+    @Test
+    public void testIsIsosceles(){
+        boolean expected = true;
+        Triangle triangle = new Triangle(2,3,2);
+        assertEquals(expected, triangle.isIsosceles(), "This triagle should be isosceles");
+    }
+
+    @Test
+    public void testIsEquilateral(){
+        boolean expected = true;
+        Triangle triangle = new Triangle(2,2,2);
+        assertEquals(expected, triangle.isEquilateral(), "This triagle should be equilateral");
+    }
+
+    @Test
+    public void testIsScalene(){
+        boolean expected = true;
+        Triangle triangle = new Triangle(5,2,4);
+        assertEquals(expected, triangle.isScalene(), "This triagle should be scalene");
+    }
 }
+
